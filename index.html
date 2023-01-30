@@ -1,40 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/d-din" type="text/css"/>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <script src="https://kit.fontawesome.com/b68693d78a.js" crossorigin="anonymous"></script>
     <title>Alexander Dean</title>
-</head>
-<body>
-    <nav>
-        <ul>
-            <li>Alexander Dean</li>
-            <li>Projects</li>
-            <li>Research</li>
-            <li>Democracy</li>
-        </ul>
-    </nav>
+    <style>
+      /* General styles */
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
 
-    <div>
-        <p>
-            Hi! My name is Alex. I’m a problem solver and I’m always looking for interesting and challenging 
-            problems to solve. I am 21-years old.
-        </p>
-    
-        <p>
-            I’m currently a software engineer at Capital One — I create and deploy machine learning tools 
-            to prevent credit card fraud. 
-        </p>
-    
-        <p>
-            I’m also passionate about creating artificial superintelligence, encouraging civic engagement, 
-            overhauling democratic government, and restructuring society to provide more time and opportunity 
-            for everyone.
-        </p>
-    
-        <p>
-            You can see my programming projects and my academic research.
-        </p>    
-    </div>
-    
-</body>
+      body {
+        font-family: 'DDINRegular';
+        display: flex;
+        min-height: 100vh;
+      }
+
+      /* Navigation styles */
+      .navigation {
+        width: 270px;
+        background-color: #163057;
+        color: #fff;
+        padding: 2rem;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .navigation ul {
+        list-style: none;
+        font-family: 'DDINRegular';
+        font-size: 160%;
+        margin: 0;
+        padding: 0;
+        flex: 1;
+      }
+
+      .navigation li {
+        margin: 1.5rem 0;
+      }
+
+      .navigation a {
+        color: #fff;
+        text-decoration: none;
+      }
+
+      .navigation h1 {
+        margin-bottom: 1rem;
+        font-size: 220%;
+	    font-family: 'Avenir Black', sans-serif;
+      }
+
+      nav a:hover, nav i:hover {
+        color: #1383cf;
+      }
+
+      /* Content styles */
+      .content {
+        flex: 1;
+        padding: 7rem 4rem;
+      }
+
+      .description {
+        font-size: 1.6rem;
+        line-height: 1.3;
+      }
+
+      p {
+        margin-bottom: 1em;
+      }
+
+      /* Footer styles */
+      .footer {
+        color: #fff;
+        text-align: left;
+        font-family: 'DDINRegular';
+	    font-size: 120%;
+	    padding-right: 3.5%;
+	    padding-top: 1.5%;
+      }
+
+      .social-icon {
+	    font-size: 120%;
+        padding-right: 12.4%;
+        padding-bottom: 7%;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navigation">
+      <h1><a href="#">Alexander <br> Dean</a></h1>
+      <ul>
+        <li><a href="">Projects</a></li>
+        <li><a href="">Research</a></li>
+        <li><a href="">Democracy</a></li>
+      </ul>
+      <footer class="footer">
+        <a href="https://github.com/alexanderjdean"><i class="social-icon fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/alexjacobdean"><i class="social-icon fa-brands fa-linkedin"></i></a>
+        <a href="https://twitter.com/alexanderjdean"><i class="social-icon fa-brands fa-twitter"></i></a>
+        <a href="https://scholar.google.com/citations?user=Z9zyFCoAAAAJ"><i class="social-icon fa-brands fa-google"></i></a>
+        <br>
+        Alexander Dean &copy; <script>document.write(new Date().getFullYear())</script>
+      </footer>
+    </nav>
+    <main class="content">
+      <p class="description">
+        Hi! My name is Alex. I’m a problem solver and I’m always looking for interesting and challenging problems to solve. I am 21-years old.
+      
+      </p>
+      <p class="description">I’m currently a software engineer at Capital One — I create and deploy machine learning tools 
+        to prevent credit card fraud. </p>
+    <p class="description">I’m passionate about creating artificial superintelligence, encouraging civic engagement, 
+        overhauling democratic government, and restructuring society to provide more time and opportunity 
+        for everyone.</p>
+      <p class="description">
+      You can see my programming projects and my academic research.
+      </p>
+    </main>
+  </body>
 </html>
