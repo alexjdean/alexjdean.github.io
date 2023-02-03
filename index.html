@@ -183,9 +183,15 @@
           padding: 2rem 2rem;
         }
 
-        .bars:before {
+        .bars {
           display: contents;
-          margin-left: 8px;
+          font-size: 150%;
+        }
+
+        .navigation .topnav {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
         }
 
         .topnav a:not(:first-child) {display: none;}
@@ -193,9 +199,12 @@
         .topnav.responsive {position: relative;}
 
         .topnav.responsive a {
-          float: none;
-          display: block;
+          display: contents;
           text-align: left;
+        }
+        
+        .routes {
+          font-size: 120%;
         }
       }
     </style>
@@ -204,12 +213,13 @@
     <nav class="navigation">
       <div class="topnav" id="myTopnav">
         <a class="name" href="index.html">Alexander <br> Dean</a>
+        <br>
         <a class="routes" href="projects.html">Projects</a>
         <br>
         <a class="routes" href="research.html">Research</a>
         <br>
         <a class="routes" href="democracy.html">Democracy</a>
-        <i id="bars" class="fa fa-bars icon" onclick="myFunction()"></i>
+        <i class="bars fa fa-bars icon" onclick="myFunction()"></i>
       </div>
       <footer class="footer">
         <a href="https://github.com/alexanderjdean"><i class="social-icon fa-brands fa-github"></i></a>
