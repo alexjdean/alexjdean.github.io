@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/d-din" type="text/css"/>
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <script src="https://kit.fontawesome.com/b68693d78a.js" crossorigin="anonymous"></script>
@@ -17,6 +18,7 @@
       body {
         font-family: 'DDINRegular';
         display: flex;
+        flex-wrap: wrap;
         min-height: 100vh;
       }
 
@@ -31,13 +33,32 @@
         flex-direction: column;
       }
 
-      .navigation ul {
-        list-style: none;
-        font-family: 'DDINRegular';
+      .routes {
+        padding-top: 1em;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: -12%;
+      }
+
+      .navigation .topnav {
         font-size: 160%;
         margin: 0;
         padding: 0;
         flex: 1;
+      }
+
+      .navigation a {
+        color: #fff;
+        text-decoration: none;
+      }
+
+      .navigation .name {
+        font-size: 140%;
+	      font-family: 'Avenir Black', sans-serif;
+      }
+
+      nav a:hover, nav i:hover {
+        color: #1383cf;
       }
 
       main {
@@ -48,25 +69,6 @@
       .navigation, .footer {
         height: auto; /* default height for these elements */
         overflow: hidden; /* no overflow */
-      }
-
-      .navigation li {
-        margin: 1.5rem 0;
-      }
-
-      .navigation a {
-        color: #fff;
-        text-decoration: none;
-      }
-
-      .navigation h1 {
-        margin-bottom: 1rem;
-        font-size: 220%;
-	    font-family: 'Avenir Black', sans-serif;
-      }
-
-      nav a:hover, nav i:hover {
-        color: #1383cf;
       }
 
       /* Content styles */
@@ -88,6 +90,10 @@
         margin-bottom: 1em;
       }
 
+      .bars {
+        display: none;
+      }
+
       /* Footer styles */
       .footer {
         color: #fff;
@@ -96,6 +102,10 @@
 	    font-size: 120%;
 	    padding-right: 3.5%;
 	    padding-top: 1.5%;
+      }
+
+      .footer-2 {
+        display: none;
       }
 
       .social-icon {
@@ -142,16 +152,104 @@
         background-color: #163057;
         color: #fff;
       }
+
+      @media screen and (max-width: 768px) {
+        .project {
+          
+        }
+
+        .project img {
+          width: 100%;
+          height: 100%;
+        }
+
+        .navigation {
+          width: 100%;
+          position: static;
+          background-color: #163057;
+          color: #fff;
+          padding: 2rem;
+          text-align: left;
+          display: flex;
+          flex-direction: column;
+        }
+
+        .content {
+          flex: 1;
+          align-items: center;
+          padding: 2rem 2rem;
+          grid-template-columns: repeat(1, 1fr);
+        }
+
+        .description {
+          font-size: 2rem;
+          line-height: 1.3;
+          margin-right: 0em;
+          margin-left: 0em;
+        }
+
+        p {
+          margin-bottom: 0em;
+          margin-top: 2em;
+        }
+
+        .footer {
+          display: none;
+        }
+
+        .footer-2 {
+          display: flex;
+          color: #fff;
+          font-family: 'DDINRegular';
+	        font-size: 120%;
+          padding-top: 10%;
+          padding-left: 10%;
+        }
+
+        .social-icon {
+          margin-left: 1em;
+	        font-size: 150%;
+          color: #163057;
+        }
+
+        .bars {
+          display: contents;
+          font-size: 150%;
+        }
+
+        .navigation .topnav {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+
+        .topnav a:not(:first-child) {display: none;}
+
+        .topnav.responsive {position: relative;}
+
+        .topnav.responsive a {
+          display: contents;
+          text-align: left;
+        }
+        
+        .routes {
+          font-size: 120%;
+        }
+      }
     </style>
   </head>
   <body>
     <nav class="navigation">
-      <h1><a href="index.html">Alexander <br> Dean</a></h1>
-      <ul>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="research.html">Research</a></li>
-        <li><a href="democracy.html">Democracy</a></li>
-      </ul>
+      <div class="topnav" id="myTopnav">
+        <a class="name" href="index.html">Alexander <br> Dean</a>
+        <br>
+        <a class="routes" href="projects.html">Projects</a>
+        <br>
+        <a class="routes" href="research.html">Research</a>
+        <br>
+        <a class="routes" href="democracy.html">Democracy</a>
+        <i class="bars fa fa-bars icon" onclick="myFunction()"></i>
+      </div>
       <footer class="footer">
         <a href="https://github.com/alexanderjdean"><i class="social-icon fa-brands fa-github"></i></a>
         <a href="https://www.linkedin.com/in/alexjacobdean"><i class="social-icon fa-brands fa-linkedin"></i></a>
@@ -162,21 +260,40 @@
       </footer>
     </nav>
     <main class="content">
-            <div class="project">
-              <img src="https://neilpatel.com/wp-content/uploads/2017/08/colors.jpg" alt="Image of Project 1">
-              <h2>Project 1</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed varius, leo a ullamcorper feugiat, ante purus sodales justo, a faucibus libero lacus a est.</p>
-            </div>
-            <div class="project">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Colouring_pencils.jpg/1200px-Colouring_pencils.jpg" alt="Image of Project 2">
-              <h2>Project 2</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed varius, leo a ullamcorper feugiat, ante purus sodales justo, a faucibus libero lacus a est.</p>
-            </div>
-            <div class="project">
-              <img src="https://htmlcolorcodes.com/assets/images/html-color-codes-color-palette-generators.jpg" alt="Image of Project 3">
-              <h2>Project 3</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed varius, leo a ullamcorper feugiat, ante purus sodales justo, a faucibus libero lacus a est.</p>
-            </div>
+      <div class="project">
+        <img src="https://neilpatel.com/wp-content/uploads/2017/08/colors.jpg" alt="Image of Project 1">
+        <h2>Project 1</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed varius, leo a ullamcorper feugiat, ante purus sodales justo, a faucibus libero lacus a est.</p>
+      </div>
+      <div class="project">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Colouring_pencils.jpg/1200px-Colouring_pencils.jpg" alt="Image of Project 2">
+        <h2>Project 2</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed varius, leo a ullamcorper feugiat, ante purus sodales justo, a faucibus libero lacus a est.</p>
+      </div>
+      <div class="project">
+        <img src="https://htmlcolorcodes.com/assets/images/html-color-codes-color-palette-generators.jpg" alt="Image of Project 3">
+        <h2>Project 3</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed varius, leo a ullamcorper feugiat, ante purus sodales justo, a faucibus libero lacus a est.</p>
+      </div>
+      <footer class="footer-2">
+        <a href="https://github.com/alexanderjdean"><i class="social-icon fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/alexjacobdean"><i class="social-icon fa-brands fa-linkedin"></i></a>
+        <a href="https://twitter.com/alexanderjdean"><i class="social-icon fa-brands fa-twitter"></i></a>
+        <a href="https://scholar.google.com/citations?user=Z9zyFCoAAAAJ"><i class="social-icon fa-brands fa-google"></i></a>
+        <br>
+        Alexander Dean &copy; <script>document.write(new Date().getFullYear())</script>
+      </footer>
     </main>
+    <script>
+      function myFunction() {
+        var x = document.getElementById("myTopnav");
+        console.log(x);
+        if (x.className === "topnav") {
+          x.className += " responsive";
+        } else {
+          x.className = "topnav";
+        }
+      }
+      </script>
   </body>
 </html>
