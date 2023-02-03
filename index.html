@@ -3,264 +3,80 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/d-din" type="text/css"/>
-    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    
     <script src="https://kit.fontawesome.com/b68693d78a.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/d-din" type="text/css"/>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+
     <title>Alexander Dean</title>
-    <style>
-      /* General styles */
-      * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-      }
-
-      body {
-        font-family: 'DDINRegular';
-        display: flex;
-        flex-wrap: wrap;
-        min-height: 100vh;
-      }
-
-      /* Navigation styles */
-      .navigation {
-        width: 270px;
-        background-color: #163057;
-        color: #fff;
-        padding: 2rem;
-        text-align: left;
-        display: flex;
-        flex-direction: column;
-      }
-
-      .routes {
-        padding-top: 1em;
-        display: flex;
-        flex-direction: column;
-        margin-bottom: -12%;
-      }
-
-      .navigation .topnav {
-        font-size: 160%;
-        margin: 0;
-        padding: 0;
-        flex: 1;
-      }
-
-      .navigation a {
-        color: #fff;
-        text-decoration: none;
-      }
-
-      .navigation .name {
-        font-size: 140%;
-	      font-family: 'Avenir Black', sans-serif;
-      }
-
-      nav a:hover, nav i:hover {
-        color: #1383cf;
-      }
-
-      /* Content styles */
-      .content {
-        flex: 1;
-        padding: 4rem 4rem;
-      }
-
-      main {
-        height: calc(100vh); /* 100vh is the height of the viewport, 80px is the height of the navigation */
-        overflow-y: auto; /* enables scrolling only on the y-axis */
-      }
-      
-      .navigation, .footer {
-        height: auto; /* default height for these elements */
-        overflow: hidden; /* no overflow */
-      }
-
-      .image-myself {
-        width: 250px;
-        height: 400px;
-        float: left;
-        margin-top: 2em;
-        margin-right: 4em;
-      }
-
-      .description {
-        font-size: 2rem;
-        line-height: 1.3;
-        margin-right: 5em;
-        margin-left: 10em;
-        padding-top: 0.7em;
-      }
-
-      p {
-        margin-bottom: 1em;
-      }
-
-      .bars {
-        display: none;
-      }
-
-      /* Footer styles */
-      .footer {
-        color: #fff;
-        text-align: left;
-        font-family: 'DDINRegular';
-	    font-size: 120%;
-	    padding-right: 3.5%;
-	    padding-top: 1.5%;
-      }
-
-      .footer-2 {
-        display: none;
-      }
-
-      .social-icon {
-	    font-size: 120%;
-        padding-right: 12.4%;
-        padding-bottom: 7%;
-      }
-
-      @media screen and (max-width: 768px) {
-        .navigation {
-          width: 100%;
-          position: static;
-          background-color: #163057;
-          color: #fff;
-          padding: 2rem;
-          text-align: left;
-          display: flex;
-          flex-direction: column;
-        }
-
-        .image-myself {
-          width: 250px;
-          height: 400px;
-          margin-top: 0em;
-          padding-bottom: 2.5em;
-          margin-left: 1.5em;
-        }
-
-        .content {
-          flex: 1;
-        }
-
-        .description {
-          font-size: 2rem;
-          line-height: 1.3;
-          margin-right: 0em;
-          margin-left: 0em;
-        }
-
-        p {
-          margin-bottom: 0em;
-          margin-top: 2em;
-        }
-
-        .footer {
-          display: none;
-        }
-
-        .footer-2 {
-          display: block;
-          color: #fff;
-          text-align: center;
-          font-family: 'DDINRegular';
-	        font-size: 120%;
-	        padding-top: 15%;
-          padding-left: 10%;
-        }
-
-        .social-icon {
-	        font-size: 150%;
-          padding-right: 12.4%;
-          padding-bottom: 7%;
-          color: #163057;
-        }
-
-        .content {
-          align-items: center;
-          padding: 2rem 2rem;
-        }
-
-        .bars {
-          display: contents;
-          font-size: 150%;
-        }
-
-        .navigation .topnav {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-        }
-
-        .topnav a:not(:first-child) {display: none;}
-
-        .topnav.responsive {position: relative;}
-
-        .topnav.responsive a {
-          display: contents;
-          text-align: left;
-        }
-        
-        .routes {
-          font-size: 120%;
-        }
-      }
-    </style>
   </head>
+  
   <body>
     <nav class="navigation">
-      <div class="topnav" id="myTopnav">
-        <a class="name" href="index.html">Alexander <br> Dean</a>
-        <br>
-        <a class="routes" href="projects.html">Projects</a>
-        <br>
-        <a class="routes" href="research.html">Research</a>
-        <br>
-        <a class="routes" href="democracy.html">Democracy</a>
-        <i class="bars fa fa-bars icon" onclick="myFunction()"></i>
+      <div class="menu" id="myMenu">
+        <a class="name" href="index.html">Alexander <br> Dean</a><br>
+
+        <!-- Routes displayed in navigation bar -->
+        <a class="route" href="pages/projects.html">Projects</a><br>
+        <a class="route" href="pages/research.html">Research</a><br>
+        <a class="route" href="pages/democracy.html">Democracy</a>
+
+        <i class="fa fa-bars display-bars" onclick="myFunction()"></i>
       </div>
-      <footer class="footer">
+      
+      <!-- Social icons displayed only on desktop footer, hidden on mobile -->
+      <footer class="desktop-footer">
         <a href="https://github.com/alexanderjdean"><i class="social-icon fa-brands fa-github"></i></a>
         <a href="https://www.linkedin.com/in/alexjacobdean"><i class="social-icon fa-brands fa-linkedin"></i></a>
         <a href="https://twitter.com/alexanderjdean"><i class="social-icon fa-brands fa-twitter"></i></a>
-        <a href="https://scholar.google.com/citations?user=Z9zyFCoAAAAJ"><i class="social-icon fa-brands fa-google"></i></a>
-        <br>
+        <a href="https://scholar.google.com/citations?user=Z9zyFCoAAAAJ"><i class="social-icon fa-brands fa-google"></i></a><br>
+        
         Alexander Dean &copy; <script>document.write(new Date().getFullYear())</script>
       </footer>
     </nav>
+
     <main class="content">
       <img src="images/me.jpg" alt="Alexander Dean" class="image-myself">
-      <p class="description">
-        Hi! My name is Alex. I’m a problem solver and I’m always looking for interesting and challenging problems to solve. I am 21-years old.
-      
-      </p>
-      <p class="description">I’m currently a software engineer at Capital One — I create and deploy machine learning tools 
-        to prevent credit card fraud. I graduated from the University of Illinois at Urbana-Champaign with a B.S. in mathematics and computer science in December 2021.</p>
-    <p class="description">I’m passionate about creating artificial superintelligence, encouraging civic engagement, 
-        overhauling democratic government, and restructuring society to provide more time and opportunity 
-        for everyone.</p>
-      <p class="description">
-      You can see my <a href="projects.html">programming projects</a> and my <a href="research.html">academic research</a>.
-      </p>
-      <footer class="footer-2">
+
+      <div class="description">
+        <p>
+          Hi! My name is Alex. I’m a problem solver and I’m always looking for interesting and challenging problems to solve. I am 21-years old.
+        </p>
+        <p>
+          I’m currently a software engineer at Capital One — I create and deploy machine learning tools to prevent credit card fraud. 
+          I graduated from the University of Illinois at Urbana-Champaign with a B.S. in mathematics and computer science in December 2021.
+        </p>
+        <p>
+          I’m passionate about creating artificial superintelligence, encouraging civic engagement, overhauling democratic government, 
+          and restructuring society to provide more time and opportunity for everyone.
+        </p>
+        <p>
+          You can see my <a href="pages/projects.html">programming projects</a> and my <a href="pages/research.html">academic research</a>.
+        </p>
+      </div>
+
+      <!-- Social icons displayed only on mobile & tablet footer, hidden on desktop -->
+      <footer class="mobile-footer">
         <a href="https://github.com/alexanderjdean"><i class="social-icon fa-brands fa-github"></i></a>
         <a href="https://www.linkedin.com/in/alexjacobdean"><i class="social-icon fa-brands fa-linkedin"></i></a>
         <a href="https://twitter.com/alexanderjdean"><i class="social-icon fa-brands fa-twitter"></i></a>
-        <a href="https://scholar.google.com/citations?user=Z9zyFCoAAAAJ"><i class="social-icon fa-brands fa-google"></i></a>
-        <br>
+        <a href="https://scholar.google.com/citations?user=Z9zyFCoAAAAJ"><i class="social-icon fa-brands fa-google"></i></a><br>
+
         Alexander Dean &copy; <script>document.write(new Date().getFullYear())</script>
       </footer>
     </main>
+    
     <script>
       function myFunction() {
-        var x = document.getElementById("myTopnav");
+        var x = document.getElementById("myMenu");
         console.log(x);
-        if (x.className === "topnav") {
+        if (x.className === "menu") {
           x.className += " responsive";
         } else {
-          x.className = "topnav";
+          x.className = "menu";
         }
       }
       </script>

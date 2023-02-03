@@ -1,0 +1,188 @@
+/* General styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'DDINRegular';
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 100vh;
+}
+
+/* Navigation styles */
+.navigation {
+    width: 270px;
+    background-color: #163057;
+    color: #fff;
+    padding: 2rem;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.navigation .menu {
+    font-size: 160%;
+    margin: 0;
+    padding: 0;
+    flex: 1;
+}
+
+.navigation a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.navigation .name {
+    font-size: 140%;
+    font-family: 'Avenir Black', sans-serif;
+}
+
+.route {
+    padding-top: 1em;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: -12%;
+}
+
+nav a:hover, nav i:hover {
+    color: #1383cf;
+}
+
+/* Content styles */
+main {
+    height: 100vh; /* 100vh is the height of the viewport */
+    overflow-y: auto; /* enables scrolling only on the y-axis */
+}
+
+.content {
+    flex: 1;
+    padding: 4rem 4rem;
+}
+
+.navigation, .footer {
+    height: auto; /* default height for these elements */
+    overflow: hidden; /* no overflow */
+}
+
+.image-myself {
+    width: 250px;
+    height: 400px;
+    float: left;
+    margin-top: 2em;
+    margin-right: 4em;
+}
+
+.description {
+    font-size: 2rem;
+    line-height: 1.3;
+    margin-right: 5em;
+    margin-left: 10em;
+}
+
+p {
+    margin-bottom: 1em;
+    padding-top: 0.7em;
+}
+
+.display-bars {
+    display: none;
+}
+
+/* Footer styles */
+.desktop-footer {
+    color: #fff;
+    text-align: left;
+    font-family: 'DDINRegular';
+    font-size: 120%;
+    padding-right: 3.5%;
+    padding-top: 1.5%;
+}
+
+.mobile-footer {
+    display: none;
+}
+
+.social-icon {
+    font-size: 120%;
+    padding-right: 12.4%;
+    padding-bottom: 7%;
+}
+
+/* Mobile & tablet styles */
+@media screen and (max-width: 1300px) {
+  .navigation {
+    width: 100%;
+    position: static;
+    background-color: #163057;
+    color: #fff;
+    padding: 2rem;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+  }
+  .image-myself {
+    width: 250px;
+    height: 400px;
+    margin-top: 0em;
+    padding-bottom: 2.5em;
+    margin-left: 1.5em;
+  }
+  .content {
+    flex: 1;
+  }
+  .description {
+    font-size: 2rem;
+    line-height: 1.3;
+    margin-right: 0em;
+    margin-left: 0em;
+  }
+  p {
+    margin-bottom: 0em;
+    margin-top: 2em;
+    padding-top: 0;
+  }
+  .desktop-footer {
+    display: none;
+  }
+  .mobile-footer {
+    display: block;
+    color: #fff;
+    text-align: center;
+    font-family: 'DDINRegular';
+      font-size: 120%;
+      padding-top: 15%;
+    padding-left: 10%;
+  }
+  .social-icon {
+      font-size: 150%;
+    padding-right: 12.4%;
+    padding-bottom: 7%;
+    color: #163057;
+  }
+  .content {
+    align-items: center;
+    padding: 2rem 2rem;
+  }
+  .display-bars {
+    display: contents;
+    font-size: 150%;
+  }
+  .navigation .menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .menu a:not(:first-child) {display: none;}
+  .menu.responsive {position: relative;}
+  .menu.responsive a {
+    display: contents;
+    text-align: left;
+  }
+  
+  .route {
+    font-size: 120%;
+  }
+}

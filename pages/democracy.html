@@ -6,7 +6,7 @@
     <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/d-din" type="text/css"/>
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <script src="https://kit.fontawesome.com/b68693d78a.js" crossorigin="anonymous"></script>
-    <title>Alexander Dean • Projects</title>
+    <title>Alexander Dean • Democracy</title>
     <style>
       /* General styles */
       * {
@@ -61,6 +61,12 @@
         color: #1383cf;
       }
 
+      /* Content styles */
+      .content {
+        flex: 1;
+        padding: 4rem 4rem;
+      }
+
       main {
         height: calc(100vh); /* 100vh is the height of the viewport, 80px is the height of the navigation */
         overflow-y: auto; /* enables scrolling only on the y-axis */
@@ -69,16 +75,6 @@
       .navigation, .footer {
         height: auto; /* default height for these elements */
         overflow: hidden; /* no overflow */
-      }
-
-      /* Content styles */
-      .content {
-        flex: 1;
-        padding: 4rem 4rem;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-gap: 2rem;
-        align-items: center;
       }
 
       .description {
@@ -104,6 +100,14 @@
 	    padding-top: 1.5%;
       }
 
+      ul {
+        padding-left: 30px;
+      }
+
+      p {
+        margin-bottom: 1em;
+      }
+
       .footer-2 {
         display: none;
       }
@@ -114,51 +118,7 @@
         padding-bottom: 7%;
       }
 
-      /* Project styles */
-      .project {
-        background-color: #f7f7f7;
-        padding: 2rem;
-        border-radius: 10px;
-        text-align: center;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      }
-
-      .project h2 {
-        margin: 1rem;
-        font-size: 1.5rem;
-      }
-
-      .project p {
-        font-size: 1.2rem;
-        line-height: 1.5;
-        margin-bottom: 1.5rem;
-      }
-
-      .project a {
-        color: #163057;
-        text-decoration: none;
-        border: 2px solid #163057;
-        padding: 0.5rem 1rem;
-        border-radius: 5px;
-        transition: all 0.2s ease-in-out;
-      }
-
-      .project img {
-        width: 400px;
-        height: 400px;
-      }
-
-      .project a:hover {
-        background-color: #163057;
-        color: #fff;
-      }
-
       @media screen and (max-width: 768px) {
-        .project img {
-          width: 100%;
-          height: 100%;
-        }
-
         .navigation {
           width: 100%;
           position: static;
@@ -172,13 +132,10 @@
 
         .content {
           flex: 1;
-          align-items: center;
-          padding: 2rem 2rem;
-          grid-template-columns: repeat(1, 1fr);
         }
 
         .description {
-          font-size: 2rem;
+          font-size: 1.7rem;
           line-height: 1.3;
           margin-right: 0em;
           margin-left: 0em;
@@ -186,7 +143,11 @@
 
         p {
           margin-bottom: 0em;
-          margin-top: 2em;
+          margin-top: 1em;
+        }
+
+        ul {
+        padding-left: 30px;
         }
 
         .footer {
@@ -194,18 +155,25 @@
         }
 
         .footer-2 {
-          display: flex;
+          display: block;
           color: #fff;
+          text-align: center;
           font-family: 'DDINRegular';
 	        font-size: 120%;
-          padding-top: 10%;
+	        padding-top: 15%;
           padding-left: 10%;
         }
 
         .social-icon {
-          margin-left: 1em;
 	        font-size: 150%;
+          padding-right: 12.4%;
+          padding-bottom: 7%;
           color: #163057;
+        }
+
+        .content {
+          align-items: center;
+          padding: 0rem 2rem;
         }
 
         .bars {
@@ -237,7 +205,7 @@
   <body>
     <nav class="navigation">
       <div class="topnav" id="myTopnav">
-        <a class="name" href="index.html">Alexander <br> Dean</a>
+        <a class="name" href="../index.html">Alexander <br> Dean</a>
         <br>
         <a class="routes" href="projects.html">Projects</a>
         <br>
@@ -256,21 +224,22 @@
       </footer>
     </nav>
     <main class="content">
-      <div class="project">
-        <img src="https://neilpatel.com/wp-content/uploads/2017/08/colors.jpg" alt="Image of Project 1">
-        <h2>Project 1</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed varius, leo a ullamcorper feugiat, ante purus sodales justo, a faucibus libero lacus a est.</p>
-      </div>
-      <div class="project">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Colouring_pencils.jpg/1200px-Colouring_pencils.jpg" alt="Image of Project 2">
-        <h2>Project 2</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed varius, leo a ullamcorper feugiat, ante purus sodales justo, a faucibus libero lacus a est.</p>
-      </div>
-      <div class="project">
-        <img src="https://htmlcolorcodes.com/assets/images/html-color-codes-color-palette-generators.jpg" alt="Image of Project 3">
-        <h2>Project 3</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed varius, leo a ullamcorper feugiat, ante purus sodales justo, a faucibus libero lacus a est.</p>
-      </div>
+      <p class="description">
+        In the past, I’ve interned with Ald. Michele Smith’s 43rd Ward Chicago office and was a candidate for 
+        Community Representative at Lincoln Park High School’s Local School Council (LSC) in March/April of 2022.
+      </p>
+      <br>
+      <p class="description">
+        Here are some of my writings on local and national issues:
+      </p>
+        <ul class="description">
+            <li><a href="https://www.chicagotribune.com/opinion/letters/ct-letters-vp-100322-20221003-zojwx6mykvh3feo47gca25eqba-story.html">Actually, small states lose out</a> — October 3, 2022, <em>Chicago Tribune</em></li>
+            <li><a href="https://chicago.suntimes.com/2022/10/1/23378615/hurricane-ian-recovery-funding-florida-labor-rights-property-taxes-elections-letters">America needs National Popular Vote Compact</a> — October 1, 2022, <em>Chicago Sun-Times</em></li>
+            <li><a href="https://chicago.suntimes.com/2022/4/28/23044648/illinois-should-be-first-state-cast-votes-presidential-primary-skyscrapers-century-consumers-letters">Illinois should be first to cast votes in 2024 presidential primary</a> — April 28, 2022, <em>Chicago Sun-Times</em></li>
+            <li><a href="https://chicago.suntimes.com/2022/4/6/23010762/lincoln-park-hs-racist-video-race-conversations-baseball-letters">Racist dating video shows schools need to talk more about diversity, inclusion</a> — April 6, 2022, <em>Chicago Sun-Times</em></li>
+            <li><a href="https://chicago.suntimes.com/2022/3/20/22984978/crooked-politicians-illinois-change-letters">Crooked politicians seem to be Illinois’ way, but that can change</a> — March 20, 2022, <em>Chicago Sun-Times</em></li>
+            <li><a href="https://chicago.suntimes.com/2022/3/17/22980851/youth-mental-health-workforce-development-russia-ukraine-putin-letters">Preparing youth for the future starts with addressing mental health</a> — March 17, 2022, <em>Chicago Sun-Times</em></li>
+        </ul>
       <footer class="footer-2">
         <a href="https://github.com/alexanderjdean"><i class="social-icon fa-brands fa-github"></i></a>
         <a href="https://www.linkedin.com/in/alexjacobdean"><i class="social-icon fa-brands fa-linkedin"></i></a>
