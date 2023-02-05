@@ -1,0 +1,18 @@
+.link-icon {
+    font-size: 60%;
+}
+
+.project a {
+    color: #163057;
+    text-decoration: none;
+    border: 2px solid #163057;
+    padding: 0.4rem 0.5rem;
+    border-radius: 5px;
+    transition: all 0.2s ease-in-out;
+}
+
+@media screen and (max-width: 1300px) {
+    .link-icon {
+        font-size: 40%;
+    }
+}
