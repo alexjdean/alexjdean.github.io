@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@700&display=swap');
+
 /* General styles */
 * {
     box-sizing: border-box;
@@ -37,7 +39,7 @@ body {
 
 .navigation .name {
     font-size: 140%;
-    font-family: 'Avenir Black', sans-serif;
+    font-family: 'Catamaran', sans-serif;
 }
 
 .route {
@@ -99,6 +101,10 @@ main {
     flex-direction: column;
   }
 
+  .navigation .name {
+    font-size: 170%;
+  }
+
   .desktop-footer {
     display: none;
   }
@@ -123,7 +129,8 @@ main {
   .menu.responsive {position: relative;}
   .menu.responsive a {
     display: contents;
-    text-align: left;
+    align-items: center;
+    justify-content: space-between;
   }
   
   .route {
