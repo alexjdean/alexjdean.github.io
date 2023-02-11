@@ -41,7 +41,7 @@ p {
     color: #163057;
     text-decoration: none;
     border: 2px solid #163057;
-    padding: 0.5rem 1rem;
+    padding: 0.4rem 0.5rem;
     border-radius: 5px;
     transition: all 0.2s ease-in-out;
 }
@@ -54,6 +54,10 @@ p {
 .project a:hover {
     background-color: #163057;
     color: #fff;
+}
+
+.link-icon {
+    font-size: 60%;
 }
 
 @media screen and (max-width: 1300px) {
@@ -79,17 +83,21 @@ p {
     }
 
     .mobile-footer {
-        display: flex;
+        display: block;
         color: #fff;
+        text-align: center;
         font-family: 'DDINRegular';
-        font-size: 120%;
-        padding-top: 10%;
-        padding-left: 10%;
+        font-size: 110%;
+        padding-top: 15%;
+        margin-left: 10%;
     }
 
     .social-icon {
         font-size: 150%;
-        margin-left: 1em;
         color: hsl(216, 60%, 21%);
+    }
+
+    .link-icon {
+        font-size: 40%;
     }
 }
