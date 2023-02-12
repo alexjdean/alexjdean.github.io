@@ -1,7 +1,7 @@
 /* Content styles */
 .content {
     flex: 1;
-    padding: 4rem 4rem;
+    padding: 4rem 3rem;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 2rem;
@@ -63,7 +63,6 @@ p {
 @media screen and (max-width: 1300px) {
     .content {
         align-items: center;
-        padding: 2rem 2rem;
         grid-template-columns: repeat(1, 1fr);
     }
 
