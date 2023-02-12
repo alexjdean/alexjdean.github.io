@@ -66,6 +66,7 @@ main {
 
 .display-bars {
     display: none;
+    position: absolute;
 }
 
 /* Footer styles */
@@ -138,14 +139,9 @@ main {
   }
 
   .menu.responsive {
-    display: inline-block;
-    position: relative;
-    
-  }
-
-  .menu.responsive i {
-    top: 0;
-    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: right;
   }
 
   .menu.responsive a {
