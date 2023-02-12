@@ -134,10 +134,6 @@ main {
     align-items: right;
   }
 
-  .navigation .menu i {
-    margin-top: 3em;
-  }
-
   .menu a:not(:first-child) {
     display: none;
   }
@@ -150,8 +146,7 @@ main {
 
   .menu.responsive a {
     display: contents;
-    align-items: right;
-    justify-content: space-between;
+    align-items: left;
   }
   
   .route {
