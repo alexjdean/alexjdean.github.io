@@ -138,17 +138,14 @@ main {
   }
 
   .menu.responsive {
-    display: flex;
-    justify-content: space-between;
-    align-items: right;
+    display: inline-block;
+    position: relative;
+    
   }
 
   .menu.responsive i {
-    margin-top: 0;
-    position: absolute;
-    top: 50%;
-    right: 1.5rem;
-    transform: translateY(-50%);
+    top: 0;
+    right: 0;
   }
 
   .menu.responsive a {
