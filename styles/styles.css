@@ -56,7 +56,6 @@ nav a:hover, nav i:hover {
 /* Content styles */
 main {
     height: 100vh; /* 100vh is the height of the viewport */
-    overflow-y: auto; /* enables scrolling only on the y-axis */
 }
 
 .navigation, .footer {
@@ -117,6 +116,10 @@ main {
   .display-bars {
     display: contents;
     font-size: 150%;
+    margin-top: 0;
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
   }
 
   .navigation .menu {
@@ -125,8 +128,16 @@ main {
     align-items: center;
   }
 
-  .menu a:not(:first-child) {display: none;}
-  .menu.responsive {position: relative;}
+  .menu a:not(:first-child) {
+    display: none;
+  }
+
+  .menu.responsive {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
   .menu.responsive a {
     display: contents;
     align-items: center;
