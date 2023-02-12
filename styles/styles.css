@@ -143,6 +143,14 @@ main {
     align-items: right;
   }
 
+  .menu.responsive i {
+    margin-top: 0;
+    position: absolute;
+    top: 50%;
+    right: 1.5rem;
+    transform: translateY(-50%);
+  }
+
   .menu.responsive a {
     display: contents;
     align-items: right;
