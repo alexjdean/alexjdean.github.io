@@ -131,7 +131,11 @@ main {
   .navigation .menu {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: right;
+  }
+
+  .navigation .menu i {
+    margin-top: 3em;
   }
 
   .menu a:not(:first-child) {
