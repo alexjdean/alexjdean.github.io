@@ -85,10 +85,9 @@ p {
         display: block;
         color: #fff;
         text-align: center;
-        font-family: 'DDINRegular';
-        font-size: 110%;
+        /* font-size: 110%;
         padding-top: 15%;
-        margin-left: 10%;
+        margin-left: 10%; */
     }
 
     .social-icon {
