@@ -132,7 +132,7 @@ main {
   .menu a.display-bars {
     position: absolute;
     right: 32px;
-    top: 32px;
+    top: 41px;
     font-size: 150%;
     display: block;
   }
@@ -146,7 +146,7 @@ main {
   .menu.responsive .display-bars {
     position: absolute;
     right: 0;
-    top: 0;
+    top: 9px;
   }
 
   .menu.responsive a {
