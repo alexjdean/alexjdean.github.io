@@ -131,8 +131,8 @@ main {
 
   .menu a.display-bars {
     position: absolute;
-    right: 0;
-    top: 0;
+    right: 32px;
+    top: 32px;
     font-size: 150%;
     display: block;
   }
