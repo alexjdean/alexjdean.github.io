@@ -42,6 +42,13 @@ body {
     font-family: 'Rubik', sans-serif;
 }
 
+.route {
+    padding-top: 1em;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: -12%;
+}
+
 nav a:hover, nav i:hover {
     color: #1383cf;
 }
@@ -96,6 +103,12 @@ main {
     text-align: left;
     display: flex;
     flex-direction: column;
+  }
+
+  .route {
+    padding-top: 0;
+    display: contents;
+    margin-bottom: 0;
   }
 
   .navigation .name {
