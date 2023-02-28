@@ -92,6 +92,7 @@ main {
 @media screen and (max-width: 1300px) {
   main {
     overflow-y: visible;
+    overflow-x: hidden;
   }
 
   .navigation {
