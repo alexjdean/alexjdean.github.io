@@ -33,18 +33,4 @@ p {
         align-items: center;
         padding: 0rem 2rem;
     }
-
-    .mobile-footer {
-        display: block;
-        color: #fff;
-        text-align: center;
-        padding-top: 15%;
-        padding-left: 10%;
-        font-size: 110%;
-    }
-
-    .social-icon {
-        font-size: 150%;
-        color: hsl(216, 60%, 21%);
-    }
 }
