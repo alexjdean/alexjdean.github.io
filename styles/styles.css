@@ -91,7 +91,7 @@ main {
 /* Mobile & tablet styles */
 @media screen and (max-width: 1300px) {
   main {
-    overflow-y: visible;
+    overflow-y: scroll;
   }
 
   .navigation {
