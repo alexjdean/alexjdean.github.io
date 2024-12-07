@@ -5,9 +5,24 @@
     <link rel="stylesheet" href="styles/index.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alex Dean</title>
+
+    <script src="scripts/theme.js"></script>
+    <script src="scripts/mobile-nav.js"></script>
 </head>
 
 <body>
+    <button class="mobile-nav-toggle" aria-label="Toggle navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+    
+    <div class="mobile-menu">
+        <a href="index.html">Home</a>
+        <a href="books.html">Books</a>
+        <a href="engineering.html">Engineering</a>
+        <a href="research.html">Research</a>
+    </div>
     
     <div class="front-page">
         <div class="page-navigation">
@@ -17,9 +32,14 @@
         </div>
     
         <div class="page-description">
+            <div class="back-navigation">
+                <a href="index.html" class="back-button">
+                    <span class="back-arrow">←</span>
+                    <span class="back-text">Back</span>
+                </a>
+            </div>
             <h1>Alex Dean</h1>
-            <a href="index.html">Back</a>
-        
+
             <p>
                 There's nothing quite like a book that changes how you see the world. There's 
                 nothing quite like perceiving life through some unspoken lens, and then having 
