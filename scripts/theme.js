@@ -1,7 +1,11 @@
-function initializeTheme() {
-    // Check for saved theme preference or default to dark
+(function() {
     const savedTheme = localStorage.getItem('theme') || 'dark';
     document.documentElement.setAttribute('data-theme', savedTheme);
+})();
+
+function initializeTheme() {
+    // Get the already-applied theme
+    const savedTheme = localStorage.getItem('theme') || 'dark';
     
     // Create and append the toggle button
     const toggleButton = document.createElement('button');
