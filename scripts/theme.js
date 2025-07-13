@@ -11,16 +11,12 @@ function initializeTheme() {
     const toggleButton = document.createElement('button');
     toggleButton.className = 'theme-toggle';
     
-    // Use more reliable Unicode characters with fallback
-    const sunIcon = '☀️';
-    const moonIcon = '🌙';
-    
-    // Set initial button text with fallback
+    // Set initial button text
     function updateButtonText(theme) {
         if (theme === 'dark') {
-            toggleButton.innerHTML = `${sunIcon} <span>Light</span>`;
+            toggleButton.innerHTML = `<span>Prefer light mode?</span>`;
         } else {
-            toggleButton.innerHTML = `${moonIcon} <span>Dark</span>`;
+            toggleButton.innerHTML = `<span>Prefer dark mode?</span>`;
         }
     }
     

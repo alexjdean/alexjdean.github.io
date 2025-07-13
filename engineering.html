@@ -71,9 +71,18 @@
                 ordered from most to least recent.</p>
 
             <ul>
-                <!-- <li>
-                    <strong>Satellite Sonnet</strong> &mdash; Text
-                </li> -->
+                <li>
+                    <strong>Satellite Sonnet</strong> &mdash; Application that generates a daily 
+                    Shakespearean sonnet about NASA's astronomy image of the day using AWS Lambda. 
+                    The application uses NASA's public API to get the day's image, encodes the 
+                    image into byte blocks, and sends the information to Anthropic's Claude for 
+                    sonnet generation. The result is cached into DynamoDB to minimize further API 
+                    calls. Upon users visiting the site, an atomic counter is incremented (using 
+                    AttributeAction.ADD) to inform users of what "visitor number" they are. You 
+                    can see <a href="https://alexdean.io/satellite-sonnet/">the website</a>, the 
+                    <a href="https://github.com/alexjdean/satellite-sonnet">frontend code</a>, and 
+                    the <a href="https://github.com/alexjdean/satellite-sonnet-backend">backend code</a>.
+                </li>
                 <li>
                     <strong>Write and Compare</strong> &mdash; Anki add-on that provides the Write 
                     and Compare note-type, allowing users to write multi-line answers to Anki cards
