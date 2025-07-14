@@ -329,6 +329,12 @@ a:hover {
         width: 85%;
         max-width: 1100px;
     }
+    
+    /* Move theme toggle up and right for 13-inch MacBooks */
+    .theme-toggle {
+        top: 0.5rem;
+        right: 1rem;
+    }
 }
 
 /* Book title styling */
