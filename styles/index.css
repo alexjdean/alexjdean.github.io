@@ -77,6 +77,7 @@ p {
     padding: 2rem;
     border-radius: 12px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    position: relative;
 }
 
 @media screen and (min-width: 640px) {
@@ -144,9 +145,9 @@ a:hover {
 
 /* Theme Toggle Button */
 .theme-toggle {
-    position: fixed;
-    top: 2rem;
-    right: 2.5rem;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
     padding: 0.4rem 0.8rem;
     border-radius: 18px;
     border: 1px solid var(--border-color);
@@ -237,8 +238,8 @@ a:hover {
     position: fixed;
     top: 0;
     left: -100%;
-    width: 80%;
-    max-width: 300px;
+    width: 45%;
+    max-width: 200px;
     height: 100vh;
     background: var(--bg-gradient-from);
     padding: 4rem 1.5rem;
@@ -298,6 +299,13 @@ a:hover {
         z-index: 1002;
     }
 
+    .back-button {
+        position: absolute;
+        top: 3.5rem;
+        right: 1rem;
+        z-index: 1001;
+    }
+
     .page-navigation {
         display: none;
     }
@@ -308,6 +316,7 @@ a:hover {
     .front-page {
         padding: 3rem 1rem 1rem;
         border-radius: 12px;
+        position: relative;
     }
 
     .mobile-nav-toggle {
@@ -321,6 +330,11 @@ a:hover {
         padding: 0.3rem 0.7rem;
         font-size: 0.8rem;
     }
+
+    .back-button {
+        top: 3.2rem;
+        right: 0.8rem;
+    }
 }
 
 /* Laptop screens (13-14 inch) */
@@ -330,9 +344,9 @@ a:hover {
         max-width: 1100px;
     }
     
-    /* Move theme toggle up and right for 13-inch MacBooks */
+    /* Adjust theme toggle position for 13-inch MacBooks */
     .theme-toggle {
-        top: 0.5rem;
+        top: 1rem;
         right: 1rem;
     }
 }

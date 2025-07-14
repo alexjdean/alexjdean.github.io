@@ -31,7 +31,12 @@ function initializeTheme() {
         updateButtonText(newTheme);
     });
     
-    document.body.appendChild(toggleButton);
+    const frontPage = document.querySelector('.front-page');
+    if (frontPage) {
+        frontPage.appendChild(toggleButton);
+    } else {
+        document.body.appendChild(toggleButton);
+    }
 }
 
 // Initialize theme when DOM is loaded
