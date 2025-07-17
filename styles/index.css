@@ -216,13 +216,15 @@ a:hover {
     top: 1.2rem;
     left: 1.2rem;
     z-index: 1001;
-    background: none;
-    border: none;
+    background: var(--bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
     padding: 0.5rem;
     cursor: pointer;
     color: var(--text-color);
-    transition: transform 0.3s ease;
+    transition: all 0.3s ease;
     transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .mobile-nav-toggle span {
@@ -273,7 +275,58 @@ a:hover {
 }
 
 /* ==========================================================================
-   8. Media Queries
+   8. Back to Top Button
+   ========================================================================== */
+.back-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 48px;
+    height: 48px;
+    background: var(--bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1000;
+    transition: all 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    color: var(--text-color);
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.back-to-top:hover {
+    background: var(--link-color);
+    color: var(--bg-color);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.back-to-top svg {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}
+
+/* Hide back-to-top on desktop where it's less needed */
+@media screen and (min-width: 768px) {
+    .back-to-top {
+        display: none;
+    }
+}
+
+/* ==========================================================================
+   9. Media Queries
    ========================================================================== */
 /* Mobile and Tablet */
 @media screen and (max-width: 768px) {
@@ -284,7 +337,7 @@ a:hover {
     }
 
     .mobile-nav-toggle {
-        position: absolute;
+        position: fixed;
         top: 1rem;
         left: 1rem;
         display: block;
@@ -334,6 +387,13 @@ a:hover {
     .back-button {
         top: 3.2rem;
         right: 0.8rem;
+    }
+
+    .back-to-top {
+        bottom: 1rem;
+        right: 1rem;
+        width: 44px;
+        height: 44px;
     }
 }
 

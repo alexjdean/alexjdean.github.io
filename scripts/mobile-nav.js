@@ -2,7 +2,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
     const mobileMenu = document.querySelector('.mobile-menu');
     const toggleSpans = mobileNavToggle.querySelectorAll('span');
+    const backToTopButton = document.querySelector('.back-to-top');
 
+    // Mobile navigation functionality
     mobileNavToggle.addEventListener('click', function() {
         mobileMenu.classList.toggle('active');
         
@@ -29,4 +31,24 @@ document.addEventListener('DOMContentLoaded', function() {
             toggleSpans[2].style.transform = 'none';
         }
     });
+
+    // Back to top functionality
+    if (backToTopButton) {
+        // Show/hide back to top button based on scroll position
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 300) {
+                backToTopButton.classList.add('visible');
+            } else {
+                backToTopButton.classList.remove('visible');
+            }
+        });
+
+        // Scroll to top when button is clicked
+        backToTopButton.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
 }); 
